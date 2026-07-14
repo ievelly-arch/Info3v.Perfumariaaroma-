@@ -7,9 +7,10 @@ import java.sql.SQLException;
 public class GerenciadorDeConexao {
 
     private static final String URL =
-            "jdbc:mysql://localhost:3306/perfumariaaroma_db?useTimezone=true&serverTimezone=UTC";
+            "jdbc:mysql://localhost:3306/perfumariaaromadb?useTimezone=true&serverTimezone=UTC";
 
     private static final String USER = "root";
+
     private static final String PASSWORD = "root";
 
     public static Connection getConnection() throws SQLException {
