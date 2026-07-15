@@ -2,8 +2,8 @@ package br.edu.ifrn.modelo;
 
 public class Venda {
 
-    private produto produto;
-    private cliente cliente;
+    private Produto produto;
+    private Cliente cliente;
     private int quantidade;
     private double valorTotal;
 
@@ -11,19 +11,19 @@ public class Venda {
         return quantidade > 0;
     }
 
-    public produto getProduto() {
+    public Produto getProduto() {
         return produto;
     }
 
-    public void setProduto(produto produto) {
+    public void setProduto(Produto produto) {
         this.produto = produto;
     }
 
-    public cliente getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
-    public void setCliente(cliente cliente) {
+    public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
 
