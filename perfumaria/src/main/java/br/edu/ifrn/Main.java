@@ -1,42 +1,54 @@
 package br.edu.ifrn;
 
-import br.edu.ifrn.modelo.*;
-import br.edu.ifrn.serviço.*;
+import br.edu.ifrn.modelo.Produto;
+import br.edu.ifrn.serviço.ProdutoServico;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        produto produto = new produto();
-        produto.setNome("Egeo Dolce");
-        produto.setMarca("O Boticário");
-        produto.setCategoria("Perfume");
-        produto.setPreco(129.90);
-        produto.setQuantidadeEstoque(10);
+        ProdutoServico produtoServico = new ProdutoServico();
 
-        cliente cliente = new cliente();
-        cliente.setNome("Evelly");
-        cliente.setTelefone("84999999999");
-        cliente.setEmail("evelly@email.com");
+        System.out.println("=== INSERINDO PRODUTOS ===");
 
-        venda venda = new venda();
-        venda.setProduto(produto);
-        venda.setCliente(cliente);
-        venda.setQuantidade(2);
-        venda.setValorTotal(259.80);
+        Produto produto1 = new Produto(
+                "Egeo Dolce",
+                "O Boticário",
+                "Perfume",
+                129.90,
+                10
+        );
 
-        produtoServico produtoServico = new produtoServico();
-        clienteServico clienteServico = new clienteServico();
-        vendaServiço vendaServico = new vendaServiço();
-        Relatorio relatorioServico = new Relatorio();
+        Produto produto2 = new Produto(
+                "Kaiak",
+                "Natura",
+                "Perfume",
+                99.90,
+                8
+        );
 
-        produtoServico.cadastrarProduto(produto);
-        clienteServico.cadastrarCliente(cliente);
-        vendaServico.registrarVenda(venda);
+        produtoServico.cadastrarProduto(produto1);
+        produtoServico.cadastrarProduto(produto2);
 
-        produtoServico.consultarProduto(produto);
+        System.out.println("\n=== LISTANDO PRODUTOS ===");
 
-        relatorioServico.gerarRelatorioVendas();
-        relatorioServico.gerarRelatorioEstoque();
+        produtoServico.listarProdutos().forEach(System.out::println);
+
+        System.out.println("\n=== ATUALIZANDO PRODUTO ===");
+
+        produto2.setPreco(109.90);
+        produto2.setQuantidadeEstoque(5);
+
+        produtoServico.atualizarProduto(produto2);
+
+        produtoServico.listarProdutos().forEach(System.out::println);
+
+        System.out.println("\n=== EXCLUINDO PRODUTO ===");
+
+        produtoServico.excluirProduto(produto1.getId());
+
+        produtoServico.listarProdutos().forEach(System.out::println);
+
     }
+
 }
