@@ -1,6 +1,6 @@
 package br.edu.ifrn.modelo;
 
-public class cliente {
+public class Cliente {
 
     private String nome;
     private String telefone;
