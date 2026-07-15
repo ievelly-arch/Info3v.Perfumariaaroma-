@@ -2,7 +2,7 @@ package br.edu.ifrn.serviço;
 
 import br.edu.ifrn.modelo.cliente;
 
-public class clienteServico {
+public class ClienteServico {
 
     public void cadastrarCliente(cliente cliente) {
 
