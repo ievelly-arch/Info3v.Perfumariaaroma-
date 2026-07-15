@@ -1,10 +1,10 @@
-package br.edu.ifrn.serviço;
+package br.edu.ifrn.servico;
 
-import br.edu.ifrn.modelo.cliente;
+import br.edu.ifrn.modelo.Cliente;
 
 public class ClienteServico {
 
-    public void cadastrarCliente(cliente cliente) {
+    public void cadastrarCliente(Cliente cliente) {
 
         if (cliente.getNome() == null || cliente.getNome().isEmpty()) {
             throw new IllegalArgumentException("Nome inválido.");
