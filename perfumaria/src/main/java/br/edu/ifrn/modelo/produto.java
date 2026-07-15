@@ -1,19 +1,39 @@
 package br.edu.ifrn.modelo;
 
-public class produto {
+public class Produto {
 
+    private Long id;
     private String nome;
     private String marca;
     private String categoria;
     private double preco;
     private int quantidadeEstoque;
 
+    public Produto() {
+    }
+
+    public Produto(String nome, String marca, String categoria, double preco, int quantidadeEstoque) {
+        this.nome = nome;
+        this.marca = marca;
+        this.categoria = categoria;
+        this.preco = preco;
+        this.quantidadeEstoque = quantidadeEstoque;
+    }
+
     public boolean estoqueDisponivel() {
-        return this.quantidadeEstoque > 0;
+        return quantidadeEstoque > 0;
     }
 
     public boolean estoqueBaixo() {
-        return this.quantidadeEstoque <= 5;
+        return quantidadeEstoque <= 5;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -55,5 +75,15 @@ public class produto {
     public void setQuantidadeEstoque(int quantidadeEstoque) {
         this.quantidadeEstoque = quantidadeEstoque;
     }
-}
 
+    @Override
+    public String toString() {
+        return "Produto{id=" + id +
+                ", nome='" + nome + '\'' +
+                ", marca='" + marca + '\'' +
+                ", categoria='" + categoria + '\'' +
+                ", preco=" + preco +
+                ", quantidadeEstoque=" + quantidadeEstoque +
+                '}';
+    }
+}
