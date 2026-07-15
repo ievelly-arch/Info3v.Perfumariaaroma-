@@ -3,7 +3,7 @@ package br.edu.ifrn.serviço;
 
 import br.edu.ifrn.modelo.venda;
 
-public class vendaServiço {
+public class VendaServico {
 
     public void registrarVenda(venda venda) {
 
