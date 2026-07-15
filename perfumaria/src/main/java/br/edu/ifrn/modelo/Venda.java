@@ -1,6 +1,6 @@
 package br.edu.ifrn.modelo;
 
-public class venda {
+public class Venda {
 
     private produto produto;
     private cliente cliente;
