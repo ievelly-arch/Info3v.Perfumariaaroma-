@@ -7,11 +7,11 @@ import java.sql.SQLException;
 public class GerenciadorDeConexao {
 
     private static final String URL =
-            "jdbc:mysql://localhost:3306/perfumariaaromadb?useTimezone=true&serverTimezone=UTC";
+            "jdbc:mysql://localhost:3306/perfumariaaromadb";
 
     private static final String USER = "root";
 
-    private static final String PASSWORD = "root";
+    private static final String PASSWORD = "Evelly.14";
 
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
