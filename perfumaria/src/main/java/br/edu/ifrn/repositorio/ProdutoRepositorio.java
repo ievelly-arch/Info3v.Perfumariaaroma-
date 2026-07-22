@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.edu.ifrn.perfumaria.modelo.Produto;
+import br.edu.ifrn.modelo.Produto;
 
 public class ProdutoRepositorio {
 

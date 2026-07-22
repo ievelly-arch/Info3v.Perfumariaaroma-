@@ -1,4 +1,4 @@
-package br.edu.ifrn.servico;
+package br.edu.ifrn.serviço;
 
 import br.edu.ifrn.modelo.Cliente;
 

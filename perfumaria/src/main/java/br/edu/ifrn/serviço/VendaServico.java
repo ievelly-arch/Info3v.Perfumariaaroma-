@@ -1,11 +1,11 @@
 package br.edu.ifrn.serviço;
 
 
-import br.edu.ifrn.modelo.venda;
+import br.edu.ifrn.modelo.Venda;
 
 public class VendaServico {
 
-    public void registrarVenda(venda venda) {
+    public void registrarVenda(Venda venda) {
 
         if (venda.getQuantidade() <= 0) {
             throw new IllegalArgumentException("Quantidade inválida.");
