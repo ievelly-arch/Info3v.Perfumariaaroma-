@@ -16,6 +16,7 @@ public class Main {
                 "O Boticário",
                 "Perfume",
                 129.90,
+                
                 10
         );
 
